@@ -55,26 +55,20 @@ class AddUserComponent extends Component{
     render(){
         return(
             <div>
-                <Typography>Add user</Typography>
+                <Typography>회원 가입</Typography>
                 <form style={formContainer}>
                
-                    <TextField type="text" placeholder="username" name="username"
+                    <TextField type="text" placeholder="이메일 주소" name="username"
                     fullWidth margin="normal" value={this.state.username} onChange={this.onChange} />
 
-                    <TextField type="password" placeholder="비번" name="password"
+                    <TextField type="password" placeholder="비밀번호" name="password"
                     fullWidth margin="normal" value={this.state.password} onChange={this.onChange} />
-                    
-                    <TextField placeholder="성" name="firstName"
-                    fullWidth margin="normal" value={this.state.firstName} onChange={this.onChange} />
                     
                     <TextField placeholder="이름" name="lastName"
                     fullWidth margin="normal" value={this.state.lastName} onChange={this.onChange} />
 
                     <TextField placeholder="나이" name="age"
                     fullWidth margin="normal" value={this.state.age} onChange={this.onChange} />
-
-                    <TextField placeholder="급여" name="salary"
-                    fullWidth margin="normal" value={this.state.salary} onChange={this.onChange} />
 
                     <Button variant="contained" color="primary" onClick={this.saveUser}>등록</Button>
                 </form>
