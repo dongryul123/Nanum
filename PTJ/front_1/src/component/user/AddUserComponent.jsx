@@ -54,7 +54,7 @@ class AddUserComponent extends Component{
 
     render(){
         return(
-            <div>
+            <div style={form}>
                 <Typography>회원 가입</Typography>
                 <form style={formContainer}>
                
@@ -88,3 +88,7 @@ const style = {
 }
 
 export default AddUserComponent;
+
+const form ={
+    marginTop:80
+}

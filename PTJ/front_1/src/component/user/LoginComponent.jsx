@@ -61,7 +61,7 @@ export default function SignInSide() {
   const classes = useStyles();
 
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container component="main" className={classes.root} style={form}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -78,10 +78,10 @@ export default function SignInSide() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="userID"
+              label="아이디"
+              name="userID"
+              autoComplete="userID"
               autoFocus
             />
             <TextField
@@ -90,7 +90,7 @@ export default function SignInSide() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="비밀번호"
               type="password"
               id="password"
               autoComplete="current-password"
@@ -128,4 +128,8 @@ export default function SignInSide() {
       </Grid>
     </Grid>
   );
+}
+
+const form ={
+  marginTop:80
 }

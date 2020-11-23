@@ -13,6 +13,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import CreateIcon from '@material-ui/icons/Create'
 import DeleteIcon from '@material-ui/icons/Delete'
+import { red } from '@material-ui/core/colors';
 
 class UserListComponent extends Component{
 
@@ -30,9 +31,7 @@ class UserListComponent extends Component{
     render(){
 
         return(
-            <div>
-          
-            
+            <div id="Main" style={form}>
             <section id="hero" className="d-flex align-items-center">
           
               <div className="container">
@@ -777,5 +776,9 @@ class UserListComponent extends Component{
     display: 'flex',
     justifyContent: 'center'
 } */}
+
+const form ={
+    marginTop:80
+}
 
 export default UserListComponent;
