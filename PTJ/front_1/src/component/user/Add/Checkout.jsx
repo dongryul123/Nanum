@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['회원 정보', 'About me!', '완료'];
 
 function getStepContent(step) {
   switch (step) {
@@ -72,8 +72,6 @@ function getStepContent(step) {
       return <AddressForm />;
     case 1:
       return <PaymentForm />;
-    case 2:
-      return <Review />;
     default:
       throw new Error('Unknown step');
   }
@@ -99,7 +97,7 @@ export default function Checkout() {
       <main className={classes.layout} style={form}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
-            Checkout
+            회원가입
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
@@ -109,7 +107,7 @@ export default function Checkout() {
             ))}
           </Stepper>
           <React.Fragment>
-            {activeStep === steps.length ? (
+            {activeStep === steps.length-1 ? (
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
                   Thank you for your order.
@@ -122,10 +120,11 @@ export default function Checkout() {
             ) : (
               <React.Fragment>
                 {getStepContent(activeStep)}
+
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} className={classes.button}>
-                      Back
+                      뒤로
                     </Button>
                   )}
                   <Button
@@ -134,7 +133,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 2 ? '가입하기' : '다음'}
                   </Button>
                 </div>
               </React.Fragment>
