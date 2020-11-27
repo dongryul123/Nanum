@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import AddUser from './AddUser';
 
 function Copyright() {
   return (
@@ -69,7 +70,8 @@ const steps = ['회원 정보', 'About me!', '완료'];
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      // return <AddressForm />;
+      return <AddUser />;
     case 1:
       return <PaymentForm />;
     default:
