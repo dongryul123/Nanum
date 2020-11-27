@@ -24,7 +24,7 @@ class NavBar extends Component{
     render() {
         return(
             <div>
-                <AppBar position="static">
+                {/* <AppBar position="static">
                     <Toolbar>
                         <IconButton edge="start" color="inherit" aria-label="Menu" href="/">
                             <MenuIcon />
@@ -34,8 +34,51 @@ class NavBar extends Component{
                         </Typography>
                         <Button variant="contained" color="primary" href="login">로그인</Button>
                     </Toolbar>
-                </AppBar>
-            </div>
+                </AppBar> */}
+
+                <div>
+                    <header id="header" className="fixed-top">
+                        <div className="container d-flex align-items-center">
+                    
+                            <h1 className="logo mr-auto"><a href="/">NaNum</a></h1>
+                            
+                        
+                    
+                            <nav className="nav-menu d-none d-lg-block">
+                            <ul>
+                                <li className="active"><a href="/">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li className="drop-down"><a href="">Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Drop Down 1</a></li>
+                                    <li className="drop-down"><a href="#">Deep Drop Down</a>
+                                    <ul>
+                                        <li><a href="#">Deep Drop Down 1</a></li>
+                                        <li><a href="#">Deep Drop Down 2</a></li>
+                                        <li><a href="#">Deep Drop Down 3</a></li>
+                                        <li><a href="#">Deep Drop Down 4</a></li>
+                                        <li><a href="#">Deep Drop Down 5</a></li>
+                                    </ul>
+                                    </li>
+                                    <li><a href="#">Drop Down 2</a></li>
+                                    <li><a href="#">Drop Down 3</a></li>
+                                    <li><a href="#">Drop Down 4</a></li>
+                                </ul>
+                                </li>
+                                <li><a href="#contact">Contact</a></li>
+                    
+                            </ul>
+                            </nav>
+                    
+                            <a href="login" className="get-started-btn scrollto">로그인</a>
+                    
+                        </div>
+                    </header>
+                    </div>
+                </div>
         
         );
     }
