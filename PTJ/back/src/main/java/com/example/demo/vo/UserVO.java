@@ -7,11 +7,10 @@ import lombok.*;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @Data
 public class UserVO {
-	int id;
-	String username;
+	String id;
 	String password;
 	String firstName;
 	String lastName;
 	int age;
-	int salary;
+	String tel;
 }
