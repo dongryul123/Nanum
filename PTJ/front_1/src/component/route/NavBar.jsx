@@ -47,10 +47,9 @@ class NavBar extends Component{
                             <nav className="nav-menu d-none d-lg-block">
                             <ul>
                                 <li className="active"><a href="/">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#team">Team</a></li>
+                                <li><a href="#about">추천 모임</a></li>
+                                <li><a href="#services">모임 개설</a></li>
+                                <li><a href="#portfolio">모임 찾기</a></li>
                                 <li className="drop-down"><a href="">Drop Down</a>
                                 <ul>
                                     <li><a href="#">Drop Down 1</a></li>
