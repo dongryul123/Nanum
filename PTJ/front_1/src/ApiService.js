@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const USER_API_BASE_URL = "http://localhost:8080/users";
+//const USER_API_BASE_URL = "http://localhost:8080/users";
+const USER_API_BASE_URL = "http://52.79.199.40:8080/users"; // EC2 프론트 : http://52.79.199.40:80
 
 class ApiService{
 
