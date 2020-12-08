@@ -24,11 +24,16 @@ public class UserController {
 	@Autowired
 	UserMapper userMapper;
 	
+	// @GetMapping
+	// public List<UserVO> userList(){
+	// 	System.out.println(userMapper.userList());
+	// 	System.out.println("유저 리스트 출력");
+	// 	return userMapper.userList();
+	// }
 	@GetMapping
-	public List<UserVO> userList(){
-		System.out.println(userMapper.userList());
-		System.out.println("유저 리스트 출력");
-		return userMapper.userList();
+	public void userList(){
+
+		System.out.println("왜 안되딛에뎅데에데에");
 	}
 	
 	@PostMapping
