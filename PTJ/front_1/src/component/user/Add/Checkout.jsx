@@ -129,14 +129,14 @@ export default function Checkout() {
                       뒤로
                     </Button>
                   )}
-                  <Button
+                  {/* <Button
                     variant="contained"
                     color="primary"
                     onClick={handleNext}
                     className={classes.button}
                   >
                     {activeStep === steps.length - 2 ? '가입하기' : '다음'}
-                  </Button>
+                  </Button> */}
                 </div>
               </React.Fragment>
             )}

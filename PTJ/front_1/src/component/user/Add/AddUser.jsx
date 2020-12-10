@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import { Link } from 'react-router-dom'
 
 class AddUser extends Component {
         constructor(props){
@@ -30,7 +31,7 @@ class AddUser extends Component {
 
         saveUser = (e) =>{
             e.preventDefault();
-    
+            
             let user = {
                 id: this.state.id,
                 password: this.state.password,
@@ -45,10 +46,11 @@ class AddUser extends Component {
                 this.setState({
                     message: user.username + "님이 등록되었습니다."
                 })
-                console.log(this.state.message);
-                this.props.history.push('/users');
+                alert("가입 성공");
+                document.location.href = "/login"
             })
             .catch(err => {
+                alert("다시 기입해주세요.");
                 console.log('saveUser() 에러', err);
             })
         }
@@ -146,7 +148,8 @@ class AddUser extends Component {
                     />
                     </Grid>
                 </Grid>
-                <Button variant="contained" color="primary" onClick={this.saveUser}>Temp 등록</Button>
+                <Button variant="contained" color="primary" onClick={this.saveUser}>가입</Button>
+                
                 </React.Fragment>
             );
         }
